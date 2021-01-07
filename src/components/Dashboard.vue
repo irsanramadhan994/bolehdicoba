@@ -1,15 +1,19 @@
 <template>
+
   <div>
-    <b-row class="my-3">
-      <b-col lg="7"><strong>Dashboard</strong></b-col>
-      <b-col lg-offset="1" lg="3"
+
+
+    <b-container fluid >
+          <b-row class="my-3">
+      <b-col lg="6" ><strong>Dashboard</strong></b-col>
+      <b-col lg-offset="1" lg="3" class="my-sm-2" 
         ><range-date
           :range_date="range_date"
           @updateStart="start = $event"
           @updateEnd="end = $event"
         ></range-date
       ></b-col>
-      <b-col align-h="end" lg="2">
+      <b-col align-h="end" lg="3" class="my-2 my-lg-0 my-sm-2 my-md-0">
         <div id="avatar-container">
           <b-avatar
             src="https://placekitten.com/300/300"
@@ -47,7 +51,7 @@
               </b-card-text>
             </b-card>
           </b-col>
-          <b-col>
+          <b-col class="my-2 my-lg-0 my-sm-0 my-md-0">
             <b-card>
               <b-card-text>
                 <pending-order :pendingOrder="order_pending"></pending-order>
@@ -56,10 +60,11 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col lg="12">
+          <b-col lg="12" class="my-sm-2">
             <b-card>
               <b-card-text>
                 <line-chart-container
+                class="my-2 my-lg-0 my-sm-0 my-md-0"
                   :chartdata="char_data"
                   :options="char_options"
                 ></line-chart-container>
@@ -68,7 +73,7 @@
           </b-col>
         </b-row>
       </b-col>
-      <b-col>
+      <b-col class="my-2">
         <b-card>
           <b-card-text>
             <summary-container :summaryData="summary_data"></summary-container>
@@ -77,11 +82,10 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col lg="9">
+      <b-col lg="9" class="my-sm-2">
         <bar-chart-container
           :chartdata="bar_data"
           :options="char_options"
-          style="width:900px;height:900px;"
         ></bar-chart-container>
       </b-col>
       <b-col>
@@ -92,6 +96,8 @@
         ></pie-chart-container>
       </b-col>
     </b-row>
+
+    </b-container>
   </div>
 </template>
 
