@@ -15,6 +15,7 @@
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="/about">About</b-nav-item>
+          <b-nav-item href="/profile">Profile</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -37,9 +38,11 @@
               </router-link>
             </b-nav-item>
             <b-nav-item>
-              <b-button variant="outline-primary"
-                ><b-icon-easel></b-icon-easel
-              ></b-button>
+              <router-link to="/profile">
+                <b-button variant="outline-primary"
+                  ><b-icon-easel></b-icon-easel
+                ></b-button>
+              </router-link>
             </b-nav-item>
           </b-nav>
         </b-row>

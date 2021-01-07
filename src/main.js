@@ -6,10 +6,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Dashboard from './components/Dashboard.vue'
 import VueRouter from 'vue-router'
 import About from './components/About.vue'
+import Profile from './components/Profile.vue'
 
 const routes = [
   {path:'/',component:Dashboard},
-  {path:'/about',component:About}
+  {path:'/about',component:About},
+  {path:'/profile',component:Profile},
+
  ]
 
  const router = new VueRouter({
